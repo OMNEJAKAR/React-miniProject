@@ -177,7 +177,7 @@ const Signup1 = () => {
                         <div className="fields">
                             <label>
                                 <input type="checkbox" id="check" required />
-                                <span> I agree to the <a href="#">terms and conditions</a></span>
+                                <span> I agree to the <a href="https://www.termsfeed.com/live/a32df8a7-8f8c-4641-8542-9170ba1d2ad4">terms and conditions</a></span>
                             </label>
                         </div>
 
