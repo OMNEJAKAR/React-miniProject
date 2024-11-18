@@ -1,0 +1,130 @@
+
+.profile-div {
+    display: flex;
+    height : 100%;
+    width : 80%;
+    margin : 10px;
+    margin-top: 20px;
+    justify-content: center;
+    border:5px solid orange;
+    border-radius:20px;
+    
+  }
+  .profile-div:hover {
+    border-bottom: 15px solid black;
+    border-right: 15px solid black;
+    transform: scale(1.02); 
+  }
+  .Profile {
+    display: flex;
+    height : 150%;
+    width : 400px;
+    margin : 10px;
+    background-color: grey;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    font-size: 30px;
+  }
+  .image {
+    display: flex;
+    height : 220px;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    width: 100%;
+    background-color: #ec00b8;
+  
+  }
+  .image img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+  }
+
+  .content {
+    height : 150px;
+    width : 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .content-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 98%;
+    background-color: #00bbe7;
+    margin: 20px;
+    border-radius: 10px;
+    border : 5px solid pink;
+  
+  
+  }
+  .content-div-info {
+    width : 50%;
+    margin : 10px;
+  }
+  .img-div {
+    width : 50%;
+    display: flex;
+    justify-content: end;
+  
+  }
+  .content-div img {
+    margin : 10px;
+    height : 280px;
+    border-radius: 10px;
+  }
+  .arrow {
+    display: none;
+  }
+.content-heading {
+    width:100%;
+    height: 300px;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+  .wrapper  {
+    display: inline-flex;
+  }
+  .wrapper .static-txt {
+    font-size: 80px;
+
+  }
+  .wrapper .dynamic-txt {
+    margin-left: 15px;
+  }
+  .dynamic-txt li {
+    list-style: none;
+    font-size: 80px;
+
+  }
+  .dynamic-txt li span {
+    position: relative;
+    color: orange;
+  }
+  .dynamic-txt li span::after {
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: blue;
+    border-left: 2px solid orange;
+    left:0;
+    animation : typing 1.54s steps(10) infinite;
+
+  }
+  @keyframes typing {
+    100%{
+      left:100%;
+      margin:0 -35px 0 45px;
+  
+    }
+  }
