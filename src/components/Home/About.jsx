@@ -6,7 +6,7 @@ import recruiter from "../recruiterarr";  // Assuming recruiterarr.js is in the 
 import Recruite from "../Recruite";  // Assuming Recruite.js is in the same directory
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./About.css";
+import styles from "./About.css";
 
 const imagesliderStyle = {
     width: '90%',

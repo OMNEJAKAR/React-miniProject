@@ -4,6 +4,8 @@ import Home from "./components/Home";
 import AboutUs from "./components/AboutUs";
 import Login from "./components/Login/Login";
 import SignUp from "./components/SignUp/SignUp";
+import Profile from "./components/Profile";
+import Reviews from "./components/Reviews";
 import "./App.css";
 function App()
 {
@@ -14,6 +16,8 @@ function App()
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/reviewForm" element={<Reviews/>}/>
 
       </Routes>
     </Router>

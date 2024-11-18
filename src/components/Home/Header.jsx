@@ -14,8 +14,8 @@ function Header()
           <Link  to="/" className="border-hover">Home</Link>
           <Link to="/aboutus" className="border-hover">About</Link>
           <Link  to="/" className="border-hover">Events</Link>
-          <Link to="/aboutus" className="border-hover">Profile</Link>
-          <Link to="/aboutus" className="border-hover">Contact</Link>
+          <Link to="/profile" className="border-hover">Profile</Link>
+          <Link to="/reviewForm" className="border-hover">Review</Link>
           <Link to="/aboutus" className="border-hover">Wallet</Link>
           
         </nav>
