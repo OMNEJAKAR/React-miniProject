@@ -19,7 +19,11 @@ function Header()
           <Link  to="/" className="border-hover">Events</Link>
           <Link to="/profile" className="border-hover">Profile</Link>
           <Link to="/reviewForm" className="border-hover">Review</Link>
+<<<<<<< HEAD
           {/* <Link to="/editProfileForm" className="border-hover">editProfile</Link> */}
+=======
+          <Link to="/aboutus" className="border-hover">Wallet</Link>
+>>>>>>> a4275c6d4ab65d5729b984dbcf58ea5cac0765ee
           
         </nav>
 

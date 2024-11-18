@@ -91,6 +91,7 @@ app.post('/reviews',async (req,res)=>{
 
 })
 
+<<<<<<< HEAD
 app.get('/reviews/:username', async (req, res) => {
     try {
         console.log(req.params.username);
@@ -114,6 +115,30 @@ app.get('/reviews/:username', async (req, res) => {
 app.get('/profile/:username', async (req, res) => {
     try {
         console.log(req.params.username);
+=======
+// app.get('/reviews/:username', async (req, res) => {
+//     try {
+//         console.log(req.params.username);
+
+//         // Use 'await' to resolve the promise
+//         const employee = await User.findOne({ username: req.params.username });
+
+//         // Check if the user exists
+//         if (!employee) {
+//             return res.status(404).json({ message: 'User not found' });
+//         }
+//         console.log(employee);
+//         res.json(employee); // Send the resolved data
+//     } catch (err) {
+//         console.error(err);
+//         res.status(500).send({ error: 'Internal Server Error' });
+//     }
+// });
+
+app.get('/reviews/:username', async (req, res) => {
+    try {
+        console.log(req.params.username);
+>>>>>>> a4275c6d4ab65d5729b984dbcf58ea5cac0765ee
 
         // Use 'await' to resolve the promise
         const employee = await User.findOne({ username: req.params.username });

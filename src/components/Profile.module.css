@@ -87,6 +87,7 @@
 .socialIcon:hover {
   color: #005582; /* Darker blue on hover */
 }
+<<<<<<< HEAD
 
 .profileButtons {
   display: flex;
@@ -124,3 +125,5 @@
   transform: scale(0.95);
   box-shadow: none;
 }
+=======
+>>>>>>> a4275c6d4ab65d5729b984dbcf58ea5cac0765ee

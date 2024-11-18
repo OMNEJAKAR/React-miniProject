@@ -1,8 +1,14 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import "./ReviewsPage.css";
 import axios from "axios";
 import Header from "./Home/Header";
 import Footer from "./Home/Footer";
+=======
+import "./Reviews.css";
+import axios from "axios";
+
+>>>>>>> a4275c6d4ab65d5729b984dbcf58ea5cac0765ee
 const Reviews = () => {
   const [formData, setFormData] = useState({
     employeeName: "",
@@ -36,8 +42,11 @@ const Reviews = () => {
 
 
   return (
+<<<<<<< HEAD
     <>
     <Header />
+=======
+>>>>>>> a4275c6d4ab65d5729b984dbcf58ea5cac0765ee
     <div  style={body}>
 
     
@@ -81,8 +90,11 @@ const Reviews = () => {
       </form>
     </div>
     </div>
+<<<<<<< HEAD
     <Footer/>
     </>
+=======
+>>>>>>> a4275c6d4ab65d5729b984dbcf58ea5cac0765ee
   );
 };
 

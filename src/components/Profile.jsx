@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Profile.module.css';
@@ -9,11 +10,22 @@ import axios from 'axios';
 const Profile = () => {
   const [userData, setUserData] = useState(null);
   const navigate = useNavigate();
+=======
+import React from 'react';
+import styles from './Profile.module.css';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
+import Header from "./Home/Header";
+import { useState,useEffect } from 'react';
+import axios from 'axios';
+const Profile = () => {
+  const [userData, setUserData] = useState(null);
+>>>>>>> a4275c6d4ab65d5729b984dbcf58ea5cac0765ee
 
   useEffect(() => {
     const fetchUserData = async () => {
       try {
         const username = localStorage.getItem('username');
+<<<<<<< HEAD
         console.log("Username from localStorage:", username);
         if (username) {
           const response = await axios.get(`http://localhost:5000/profile/${username}`);
@@ -51,6 +63,20 @@ const Profile = () => {
     navigate(`/reviewPage`);
   };
 
+=======
+        console.log(username);
+        if (username) {
+          const response = await axios.get(`http://localhost:5000/reviews/${username}`);
+          console.log(response.data);
+          setUserData(response.data);
+        }
+        else {
+          console.error("No user_id found in localStorage!");
+        }
+      } catch (error) { console.error("There was an error fetching the data!", error); }
+    }; fetchUserData();
+  }, []);
+>>>>>>> a4275c6d4ab65d5729b984dbcf58ea5cac0765ee
   return (
     <>
       <Header />
@@ -71,7 +97,11 @@ const Profile = () => {
           <div className={styles.profileDetails}>
             <div className={styles.profileInfo}>
               <FaEnvelope className={styles.icon} />
+<<<<<<< HEAD
               <span>{userData.email}</span>
+=======
+              <span>johndoe@example.com</span>
+>>>>>>> a4275c6d4ab65d5729b984dbcf58ea5cac0765ee
             </div>
             <div className={styles.profileInfo}>
               <FaPhone className={styles.icon} />
@@ -82,6 +112,7 @@ const Profile = () => {
               <span>San Francisco, CA</span>
             </div>
           </div>
+<<<<<<< HEAD
           <div className={styles.profileButtons}>
             <button
               className={styles.profileButton}
@@ -97,6 +128,8 @@ const Profile = () => {
             </button>
           </div>
 
+=======
+>>>>>>> a4275c6d4ab65d5729b984dbcf58ea5cac0765ee
           <div className={styles.profileSocial}>
             <a href="https://linkedin.com" className={styles.socialIcon}>
               <FaLinkedin />
@@ -107,7 +140,10 @@ const Profile = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       <Footer />
+=======
+>>>>>>> a4275c6d4ab65d5729b984dbcf58ea5cac0765ee
     </>
   );
 };
