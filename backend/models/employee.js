@@ -16,6 +16,7 @@ const EmployeeSchema = new Schema({
     gender: {
         type:String,
     },
+<<<<<<< HEAD
     isEmployer:{
         type:Boolean
     },
@@ -31,6 +32,8 @@ const EmployeeSchema = new Schema({
         type:String,
         default:"to be updated"
     },
+=======
+>>>>>>> 24215ece94b765ab66762f1dde32998d00f7f09b
     reviews:[{
         type:Schema.Types.ObjectId,
         ref:'Review'

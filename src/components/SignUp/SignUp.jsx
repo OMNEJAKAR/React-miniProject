@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from "../Home/Header";
-import omkarImage from '../AllImages/omkar.jpg';
+import omkarImage from '../AllImages/SEVA.png';
 import "./signup.css";
 
 const SignUp = () => {
@@ -157,7 +157,7 @@ const SignUp = () => {
 
                                 {!formData.isRetailer && (
                                     <div id="description">
-                                        <p className='SC'>Welcome to our platform! Join us as a retailer and expand your business.</p>
+                                        <p className='SC'>Welcome to our platform! Join us as a organization and expand your network.</p>
                                         <div className="toggle-section">
                                             <a href="/login">Already have an account? Login here</a>
                                         </div>

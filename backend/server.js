@@ -9,7 +9,10 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/employee');
 const Review = require('./models/review');
+<<<<<<< HEAD
 const Employer = require('./models/employer');
+=======
+>>>>>>> 24215ece94b765ab66762f1dde32998d00f7f09b
 
 dotenv.config();
 const app = express();
@@ -58,11 +61,19 @@ app.get("/", async (req, res) => {
 });
 
 
+<<<<<<< HEAD
 app.post('/register', async (req, res) => {
     try {
         const { username, age, phone, email, gender, password, isRetailer } = req.body;
         const employee = new User({ username, age, phone, email, gender,isEmployer:isRetailer});
         const newEmployee = await User.register(employee, password);
+=======
+app.post('/register',async (req,res)=>{
+    try{
+        const {username,age,phone,email,gender,password} = req.body;  
+        const employee = new User({username,age,phone,email,gender});
+        const newEmployee = await User.register(employee,password);
+>>>>>>> 24215ece94b765ab66762f1dde32998d00f7f09b
         console.log(newEmployee);
         if (isRetailer) {
             const { retailerDetails } = req.body;
@@ -79,6 +90,7 @@ app.post('/register', async (req, res) => {
     }
 })
 
+<<<<<<< HEAD
 app.post('/reviews', async (req, res) => {
     const { employeeName, rating, comments } = req.body;
     const employee = await User.findOne({ username: employeeName });
@@ -87,12 +99,23 @@ app.post('/reviews', async (req, res) => {
         name: employeeName,
         rating: rating,
         comment: comments
+=======
+app.post('/reviews',async (req,res)=>{
+    const {employeeName,rating,comments} = req.body;
+    const employee = await User.findOne({username:employeeName});
+    console.log(employee);
+    const review = new Review({
+        name:employeeName,
+        rating:rating,
+        comment:comments
+>>>>>>> 24215ece94b765ab66762f1dde32998d00f7f09b
     })
     console.log(review);
     await review.save();
     employee.reviews.push(review);
     console.log(employee);
     await employee.save();
+<<<<<<< HEAD
 
     // console.log("Received data:", req.body);
 
@@ -100,6 +123,16 @@ app.post('/reviews', async (req, res) => {
 
 })
 
+=======
+    
+    // console.log("Received data:", req.body);
+
+  res.status(200).json({ message: "Review saved successfully!" });
+
+})
+
+<<<<<<< HEAD
+>>>>>>> 24215ece94b765ab66762f1dde32998d00f7f09b
 app.get('/reviews/:username', async (req, res) => {
     try {
         console.log(req.params.username);
@@ -113,16 +146,51 @@ app.get('/reviews/:username', async (req, res) => {
         }
         // console.log(employee);
         res.json(employee); // Send the resolved data
+<<<<<<< HEAD
 
     } catch (err) {
         console.error(err);
         res.status(500).send({ error: 'Internal Server Error' });
     }
+=======
+        
+    } catch (err) {
+        console.error(err);
+        res.status(500).send({ error: 'Internal Server Error' });
+    }
+>>>>>>> 24215ece94b765ab66762f1dde32998d00f7f09b
 });
 
 app.get('/profile/:username', async (req, res) => {
     try {
         console.log(req.params.username);
+<<<<<<< HEAD
+=======
+=======
+// app.get('/reviews/:username', async (req, res) => {
+//     try {
+//         console.log(req.params.username);
+
+//         // Use 'await' to resolve the promise
+//         const employee = await User.findOne({ username: req.params.username });
+
+//         // Check if the user exists
+//         if (!employee) {
+//             return res.status(404).json({ message: 'User not found' });
+//         }
+//         console.log(employee);
+//         res.json(employee); // Send the resolved data
+//     } catch (err) {
+//         console.error(err);
+//         res.status(500).send({ error: 'Internal Server Error' });
+//     }
+// });
+
+app.get('/reviews/:username', async (req, res) => {
+    try {
+        console.log(req.params.username);
+>>>>>>> a4275c6d4ab65d5729b984dbcf58ea5cac0765ee
+>>>>>>> 24215ece94b765ab66762f1dde32998d00f7f09b
 
         // Use 'await' to resolve the promise
         const employee = await User.findOne({ username: req.params.username });
@@ -139,6 +207,7 @@ app.get('/profile/:username', async (req, res) => {
     }
 });
 
+<<<<<<< HEAD
 app.put('/profile/:username',async (req,res)=>{
     try{
     const {username,address,description,email,profession,phone} = req.body;
@@ -157,6 +226,8 @@ app.put('/profile/:username',async (req,res)=>{
 })
 
 
+=======
+>>>>>>> 24215ece94b765ab66762f1dde32998d00f7f09b
 
 app.post('/login', (req, res, next) => {
     passport.authenticate('local', (err, user, info) => {

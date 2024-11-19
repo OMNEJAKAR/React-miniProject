@@ -10,11 +10,15 @@ const EditProfile = () => {
     username: '',
     email: '',
     phone: '',
+<<<<<<< HEAD
     address: '',
     description:'',
     profession:'',
 
 
+=======
+    location: '',
+>>>>>>> 24215ece94b765ab66762f1dde32998d00f7f09b
   });
 
   const navigate = useNavigate();
@@ -29,9 +33,13 @@ const EditProfile = () => {
             username: response.data.username,
             email: response.data.email,
             phone: response.data.phone,
+<<<<<<< HEAD
             address: response.data.address || 'San Francisco, CA', // Default value if location is missing
             description:response.data.description,
             profession:response.data.profession
+=======
+            location: response.data.location || 'San Francisco, CA', // Default value if location is missing
+>>>>>>> 24215ece94b765ab66762f1dde32998d00f7f09b
           });
         } else {
           console.error("No username found in localStorage!");
@@ -53,6 +61,7 @@ const EditProfile = () => {
   };
 
   const handleSubmit = async (e) => {
+<<<<<<< HEAD
     
     e.preventDefault();
     try {
@@ -61,6 +70,13 @@ const EditProfile = () => {
       alert('Profile updated successfully!');
       navigate('/profile');
       
+=======
+    e.preventDefault();
+    try {
+      await axios.put(`http://localhost:5000/profile/${formData.username}`, formData);
+      alert('Profile updated successfully!');
+      navigate('/profile');
+>>>>>>> 24215ece94b765ab66762f1dde32998d00f7f09b
     } catch (error) {
       console.error('Error updating profile:', error);
       alert('There was an error updating your profile.');
@@ -107,6 +123,7 @@ const EditProfile = () => {
             />
           </div>
           <div className={styles.formGroup}>
+<<<<<<< HEAD
             <label htmlFor="address">Address</label>
             <input
               type="text"
@@ -137,6 +154,17 @@ const EditProfile = () => {
             />
           </div>
           
+=======
+            <label htmlFor="location">Location</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              value={formData.location}
+              onChange={handleChange}
+            />
+          </div>
+>>>>>>> 24215ece94b765ab66762f1dde32998d00f7f09b
           <button type="submit" className={styles.saveButton}>
             Save Changes
           </button>
